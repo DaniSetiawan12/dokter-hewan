@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fffffF"
+    tools:context=".tentang">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:id="@+id/top"
+        android:background="@color/md_amber_A700"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/dokterr"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="Pencarian Dokter Hewan Terdekat Di Bandar Lampung"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#616161"
+            app:fontFamily="@font/bree_serif"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:text="Aplikasi Ini Di Buat Untuk Memudahkan Masyarakat Yang Ada Di Bandar Lampung Untuk Mencari Dokter Hewan Terdekat Yang Ada Di Kota Bandar Lampung"
+        android:textSize="19dp"
+        app:fontFamily="@font/bree_serif"/>
+</LinearLayout>
