@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context=".admin.DetailDokwan">
+
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#444"
+        app:animateOnBoundary="true"
+        app:autoPlay="true"
+        app:fillColor="#FFFFFFFF"
+        app:indicatorGravity="top"
+        app:pageColor="#00000000"
+        app:pageTransformInterval="1500"
+        app:pageTransformer="depth"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:indicatorVisibility="gone"
+        app:strokeWidth="1dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginTop="-60dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:tint="#FFFFFF"
+        app:srcCompat="@drawable/ic_input_data"
+        android:contentDescription="Tambah Gambar"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center|left">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    card_view:srcCompat="@drawable/ic_admin"
+                    android:layout_height="30dp"
+                    card_view:tint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtNamaKlinik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Dani Scot"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/edtNama"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="right">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/startTrue"
+                        app:srcCompat="@drawable/ic_start_true"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/startFalse"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_baseline_star_border_24"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f2f4f4"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        card_view:srcCompat="@drawable/ic_alamat"
+                        android:layout_height="30dp"
+                        card_view:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txtAlamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="0897676765"
+                            android:textStyle="bold"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/mapbox_blue"
+                        android:tint="#FFFFFF"
+                        app:srcCompat="@drawable/ic_input_data"
+                        app:fabSize="mini"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:id="@+id/fabButtonEditAlamat"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        card_view:srcCompat="@drawable/ic_phone"
+                        android:layout_height="30dp"
+                        card_view:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txtNoTelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="0897676765"
+                        android:textStyle="bold"
+                        android:textAllCaps="false" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/edtNoTelp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/mapbox_blue"
+                            android:tint="#FFFFFF"
+                            app:srcCompat="@drawable/ic_input_data"
+                            android:id="@+id/fabButtonEditNoTelp"
+                            app:fabSize="mini"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"/>
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/md_green_600"
+                            android:tint="#FFFFFF"
+                            app:srcCompat="@drawable/ic_oke"
+                            android:id="@+id/fabButtonSimpanNoTelp"
+                            app:fabSize="mini"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center|left">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        card_view:srcCompat="@drawable/ic_email"
+                        android:layout_height="30dp"
+                        card_view:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/txtEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="0897676765"
+                        android:textStyle="bold"
+                        android:textAllCaps="false" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/edtEmail"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/mapbox_blue"
+                            android:tint="#FFFFFF"
+                            app:srcCompat="@drawable/ic_input_data"
+                            android:id="@+id/fabButtonEditEmail"
+                            app:fabSize="mini"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"/>
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/md_green_600"
+                            android:tint="#FFFFFF"
+                            app:srcCompat="@drawable/ic_oke"
+                            android:id="@+id/fabButtonSimpanEmail"
+                            app:fabSize="mini"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:id="@+id/lihatDokter"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Jadwal Layanan"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_dokter"
+                    card_view:tint="#FFFFFF" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:id="@+id/lihatJenisHewan"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_green_A700"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Jenis Hewan"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_jenis_hewan"
+                    card_view:tint="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:id="@+id/lihatPerawatan"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_amber_800"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Layanan Kesehatan"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_perawatan"
+                    card_view:tint="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:id="@+id/goRoutes"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_red_A400"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Mulai"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_navigate"
+                    card_view:tint="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </TableLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kembali"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/txtJudul"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rounded_close"
+                app:srcCompat="@drawable/ic_close" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/array_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="@null"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:dividerHeight="5.0sp" />
+
+    <ListView
+        android:id="@+id/array_list_jenisHewan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="@null"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:dividerHeight="5.0sp" />
+
+    <ListView
+        android:id="@+id/array_list_perawatan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="@null"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:dividerHeight="5.0sp" />
+
+
+</LinearLayout>

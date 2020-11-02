@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_white_1000"
+    tools:context=".admin.InputDataDokwan">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/input_icon"/>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Input Dokter"
+                    android:textSize="16dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/colorTextInputBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtNamaDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="12dp"
+                            android:hint="Nama"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_admin"
+                            android:drawableLeft="@drawable/ic_admin"
+                            android:imeOptions="actionNext"
+                            android:minWidth="320dp"
+                            android:minHeight="50dp"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/colorTextInputBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtNotelpDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="12dp"
+                            android:hint="Nomor Telphone"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:drawableLeft="@drawable/ic_phone"
+                            android:imeOptions="actionNext"
+                            android:minWidth="320dp"
+                            android:minHeight="50dp"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/colorTextInputBackground"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtNoIzinPrak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="12dp"
+                            android:hint="No Izin Praktek"
+                            android:drawableTint="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_latlong"
+                            android:drawableLeft="@drawable/ic_latlong"
+                            android:imeOptions="actionNext"
+                            android:minWidth="320dp"
+                            android:minHeight="50dp"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jadwal Layanan"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtSenin"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Senin"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamSenin"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:inputType="textAutoComplete" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/edtRuanganSenin"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtSelasa"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:hint="Selasa"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamSelasa"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:inputType="text"/>
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/edtRuanganSelasa"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtRabu"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:hint="Rabu"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamRabu"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/edtRuanganRabu"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtKamis"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:hint="Kamis"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamKamis"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtRuanganKamis"
+                            android:visibility="gone"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJumat"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:hint="Jum'at"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamJumat"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/edtRuanganJumat"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtSabtu"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:hint="Sabtu"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamSabtu"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:id="@+id/edtRuanganSabtu"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtMinggu"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:drawableLeft="@drawable/ic_hari"
+                            android:hint="Minggu"
+                            android:enabled="false"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtJamMinggu"
+                            android:drawableLeft="@drawable/ic_jam"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Jam"
+                            android:inputType="text" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="10dip"
+                            android:layout_weight="1"
+                            android:id="@+id/edtRuanganMinggu"
+                            android:visibility="gone"
+                            android:drawableLeft="@drawable/ic_ruangan"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:hint="Ruangan"
+                            android:inputType="textAutoComplete" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/md_white_1000"
+                    style="@style/Button1"
+                    android:text="Submit"/>
+
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

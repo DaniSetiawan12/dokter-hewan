@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.Dokter">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:navigationContentDescription="@string/abc_action_bar_up_description">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="Data Perawatan"/>
+
+            <ImageView
+                android:id="@+id/tambahData"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:adjustViewBounds="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/array_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="@null"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="16dp"
+        android:dividerHeight="5.0sp" />
+
+</LinearLayout>

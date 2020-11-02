@@ -7,10 +7,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:paddingBottom="90dp"
     android:layout_margin="15dp"
     android:background="#F5F5F5"
-    tools:context=".login">
+    tools:context=".users.Login">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,35 +18,28 @@
         android:gravity="center"
         android:layout_gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="heh"/>
-
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/dokterr" />
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icon___" />
     </LinearLayout>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login Admin"
-        android:textSize="18dp"
-        android:textColor="#424949"
+        android:text="Login Admin !"
+        android:textColor="@color/md_blue_grey_500"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="9dp"
         android:textStyle="bold"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:orientation="vertical"
         android:background="#F5F5F5"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
         android:gravity="center">
 
         <androidx.cardview.widget.CardView
@@ -55,9 +47,7 @@
             android:layout_height="match_parent"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
-            app:cardUseCompatPadding="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:cardUseCompatPadding="true">
 
 
             <LinearLayout
@@ -65,57 +55,53 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginRight="16dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_gravity="center">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dip"
-                    android:id="@+id/edtUsername"
-                    android:drawableLeft="@drawable/ic_username"
-                    android:hint="Username"
-                    android:inputType="text" />
+                    android:id="@+id/edtEmail"
+                    android:drawableTint="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:hint="Email"
+                    android:inputType="textAutoComplete" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dip"
-                    android:id="@+id/Password"
+                    android:id="@+id/edtPassword"
+                    android:drawableTint="@color/colorPrimary"
                     android:drawableLeft="@drawable/ic_lock"
                     android:hint="Password"
-                    android:inputType="text" />
+                    android:inputType="textPassword" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Login"
                     android:id="@+id/btnLogin"
-                    android:background="@color/md_amber_A700"
+                    android:background="@color/colorPrimary"
                     android:layout_marginTop="15dp"
                     android:textColor="#ffffff"/>
-                <LinearLayout
+
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:text="Belum Punya Akun ? Daftar Disini"
+                    android:textAllCaps="false"
                     android:gravity="right"
-                    android:id="@+id/skipLogin"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textColor="#424949"
-                        android:text="Skip Login"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_next"
-                        android:tint="#424949" />
-                </LinearLayout>
+                    android:id="@+id/btnLinkregister"
+                    android:background="@null"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_blue_grey_500"
+                    android:layout_marginTop="15dp"/>
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>

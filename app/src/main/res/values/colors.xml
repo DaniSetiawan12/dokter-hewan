@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#48C9B0</color>
-    <color name="colorPrimaryDark">#379885</color>
-    <color name="colorAccent">#EF5350</color>
+
+    <color name="colorPrimary">#3498DB</color>
+    <color name="colorPrimaryDark">#2980B9</color>
+    <color name="colorAccent">#2980B9</color>
     <color name="colorBackground">#fff</color>
     <color name="colorIcon">#cccccc</color>
     <color name="colorTextInputBackground">#F7F7F7</color>
     <color name="actionbarOpacity">#00000000</color>
+    <color name="colorGreen">#37BC9B</color>
+
+    <color name="grey">#808080</color>
+    <color name="yellow">#F4D03F</color>
+    <color name="red">#E74C3C</color>
 
     <!--reds-->
     <color name="md_red_50">#FFEBEE</color>

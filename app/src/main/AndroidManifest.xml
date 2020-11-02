@@ -2,17 +2,49 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dokterhewan">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".tentang"></activity>
-        <activity android:name=".registrasi" />
-        <activity android:name=".login" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".pengguna.JamLayanan"></activity>
+        <activity android:name=".admin.JamLayananEdit" />
+        <activity android:name=".pengguna.Maps" />
+        <activity android:name=".pengguna.SubMenu" />
+        <activity android:name=".admin.PerawatanActivity" />
+        <activity android:name=".admin.JenisHewanActivity" />
+        <activity android:name=".admin.Dokter" />
+        <activity android:name=".pengguna.History" />
+        <activity android:name=".pengguna.Favorite" />
+        <activity android:name=".pengguna.Detail" />
+        <activity android:name=".pengguna.DataDokwanPengguna" />
+        <activity android:name=".admin.JenisHewan" />
+        <activity android:name=".admin.Perawatan" />
+        <activity android:name=".admin.TambahGambar" />
+        <activity android:name=".admin.DetailDokwan" />
+        <activity android:name=".admin.DataDokwanAdmin" />
+        <activity android:name=".admin.InputDokter" />
+        <activity android:name=".admin.InputDataDokwan" />
+        <activity android:name=".admin.HomeAdmin" />
+        <activity android:name=".tentang" />
+        <activity android:name=".users.registrasi" />
+        <activity android:name=".users.Login" />
+        <activity android:name=".pengguna.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
