@@ -2,11 +2,11 @@ package com.example.dokterhewan.server;
 
 public class BaseURL {
 
-//    public static String baseUrl = "http://192.168.18.9:5000/";
+//    public static String baseUrl = "http://192.168.18.146:5000/";
 //    public static String baseUrl = "http://172.31.0.98:5000/";
 //    public static String baseUrl = "http://192.168.43.99:5000/";
-//    public static String baseUrl = "http://192.168.43.156:5000/";
-    public static String baseUrl   = "http://192.168.18.102:5000/";
+    public static String baseUrl = "http://192.168.43.156:5000/";
+//    public static String baseUrl   = "http://192.168.18.102:5000/";
 
     //users
     public static String registrasiUser     = baseUrl + "user/registrasi";

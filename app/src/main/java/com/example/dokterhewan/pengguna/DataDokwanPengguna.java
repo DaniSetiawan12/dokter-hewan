@@ -17,9 +17,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -67,6 +69,11 @@ public class DataDokwanPengguna extends AppCompatActivity
     private RequestQueue mRequestQueue;
     EditText edtSearch;
 
+    int socketTimeout = 500000;
+    RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
+            DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+            DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,8 +118,8 @@ public class DataDokwanPengguna extends AppCompatActivity
                         hideDialog();
                         try {
                             boolean status = response.getBoolean("error");
+                            String data = response.getString("data");
                             if (status == false) {
-                                String data = response.getString("data");
                                 JSONArray jsonArray = new JSONArray(data);
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -151,6 +158,8 @@ public class DataDokwanPengguna extends AppCompatActivity
                                     dokWan.setDuration(duration);
                                     dokWan.setFav(fav);
 
+                                    Log.d("Jarak = ", jarak);
+
                                     list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                         @Override
                                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -188,6 +197,7 @@ public class DataDokwanPengguna extends AppCompatActivity
         });
 
         /* Add your Requests to the RequestQueue to execute */
+        req.setRetryPolicy(policy);
         mRequestQueue.add(req);
     }
 

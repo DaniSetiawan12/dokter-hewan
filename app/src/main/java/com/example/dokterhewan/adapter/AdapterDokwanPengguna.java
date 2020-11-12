@@ -61,7 +61,7 @@ public class AdapterDokwanPengguna extends BaseAdapter {
         ImageView gambar     = (ImageView) convertView.findViewById(R.id.gambarPetshop);
 
 
-        namaDokwan.setText(item.get(position).getNamaDokwan());
+        namaDokwan.setText(item.get(position).getNamaDokwan() + " " + item.get(position).getJarak());
         notelp.setText(item.get(position).getNotelp());
         alamat.setText(item.get(position).getAlamat());
         email.setText(item.get(position).getEmail());

@@ -33,9 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="Dani Scot"
-                android:gravity="center"
                 android:textAllCaps="false"
-                android:textSize="18dp"
                 android:textStyle="bold" />
 
 
@@ -45,9 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="2 Km"
+                android:visibility="gone"
                 android:gravity="center"
                 android:textAllCaps="false"
-                android:textSize="18dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
